@@ -5,7 +5,7 @@ class BuilderNavBar extends React.Component {
     render() {
         return (
             <Container className='m-1'>
-                <Navbar.Brand className='text-dark'>RB</Navbar.Brand>
+                <Navbar.Brand className='text-primary'>RB</Navbar.Brand>
             </Container>
         )
     }
