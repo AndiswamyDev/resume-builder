@@ -61,4 +61,31 @@ export const initiateTooltip = () => {
         animation: 'scale',
         placement: 'right'
     });
+
+    //toolbar icons
+    tippy(`#${CONSTANTS.TEMPLATES}`, {
+        content: 'Templates',
+        animation: 'scale',
+        placement: 'bottom'
+    });
+    tippy(`#${CONSTANTS.COLOURS}`, {
+        content: 'Colors',
+        animation: 'scale',
+        placement: 'bottom'
+    });
+    tippy(`#${CONSTANTS.FONT_SIZE}`, {
+        content: 'Font size',
+        animation: 'scale',
+        placement: 'bottom'
+    });
+    tippy(`#${CONSTANTS.FONT_FAMILY}`, {
+        content: 'Font family',
+        animation: 'scale',
+        placement: 'bottom'
+    });
+    tippy(`#${CONSTANTS.DOWNLOAD}`, {
+        content: 'Download',
+        animation: 'scale',
+        placement: 'bottom'
+    });
 }
