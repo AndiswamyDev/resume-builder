@@ -1,14 +1,18 @@
 export interface SideBarFieldsInterfaces {
     handleFieldTypes: (type: string, event: React.ChangeEvent<HTMLInputElement>) => void;
-    handleAddDetails: (from: string) => void;
+    handleAddItemModal: (from: string) => void;
     headings: any;
+    itemsToAdd: any;
+    hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
 }
 
 export interface FieldToFillInterfaces {
     fromType: string;
     handleFieldTypes: (type: string, event: React.ChangeEvent<HTMLInputElement>) => void;
-    handleAddDetails: (from: string) => void;
-    headings: any
+    handleAddItemModal: (from: string) => void;
+    headings: any;
+    itemsToAdd: any;
+    hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
 }
 
 export interface UserProfileInterfaces {
@@ -34,5 +38,18 @@ export interface PreviewResumeInterfaces {
 export interface AddItemModalInterfaces {
     show: boolean;
     onClose: () => void;
-    fromType: string
+    fromType: string;
+    hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
+}
+
+export interface FormItemsListElementInterfaces {
+    heading: string;
+    itemsToAdd: any;
+    hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
+}
+
+export interface CreateItemProps {
+    item: any,
+    heading: string;
+    hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
 }
