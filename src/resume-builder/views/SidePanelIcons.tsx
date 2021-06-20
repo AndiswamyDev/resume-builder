@@ -35,7 +35,7 @@ class SidePanelIcons extends React.Component {
     }
     render() {
         return (
-            <div id={CONSTANTS.RESUME_BUILDER_SIDE_PANEL_ICONS} className='d-flex flex-column m-2'>
+            <div id={CONSTANTS.RESUME_BUILDER_SIDE_PANEL_ICONS} className='d-flex flex-column border-top border-light'>
                 <a id={CONSTANTS.PROFILE} className='m-1' href={'#' + CONSTANTS.FIELD_USER_PROFILE}>
                     {this.state.isProfile && (<FontAwesomeIcon className='m-2' icon={faUserAlt} color='#2c785c' />)}
                 </a>

@@ -2,13 +2,15 @@ body {
     color: #fff;
 }
 
-#side-panel-icons a {
+#side-panel-icons a,
+#toolbar-icons-wrapper a {
     cursor: pointer;
     transition: transform 0.5s;
 }
 
-#side-panel-icons a:hover {
-    transform: scale(1.5);
+#side-panel-icons a:hover,
+#toolbar-icons-wrapper a:hover {
+    transform: scale(1.3);
 }
 
 .side-panel-fields {

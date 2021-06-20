@@ -20,7 +20,13 @@ class LeftSideBarOptions extends React.Component {
             hobbies: 'Hobbies',
             languages: 'Languages',
         },
-        templateProperties: {},
+        templateProperties: {
+            color: '#000',
+            fontFamily: 'monospace',
+            themeColor: 'violet',
+            fontSize: '10px',
+            headingColor: 'red'
+        },
         resumeTitle: '',
         firstName: '',
         lastName: '',
@@ -43,19 +49,7 @@ class LeftSideBarOptions extends React.Component {
         languagesItems: [],
         isModalOpen: false,
     }
-    componentDidMount() {
-        this.setState({
-            templateProperties: {
-                color: '#000',
-                fontFamily: 'monospace',
-                themeColor: 'violet',
-                fontSize: '10px',
-                headingColor: 'red'
-            }
-        })
-    }
     handleFieldTypes = (type: string, event: React.ChangeEvent<HTMLInputElement>) => {
-        // console.log(event.target.name, event.target.value);
         switch (type) {
             case 'resumeTitle':
                 this.setState({
@@ -201,14 +195,12 @@ class LeftSideBarOptions extends React.Component {
                 break;
         }
     }
-
     handleAddItemModal = (from: string) => {
         this.setState({
             isModalOpen: true,
             fromType: from
         });
     }
-
     closeAddItemModal = () => {
         this.setState({
             isModalOpen: false
@@ -217,55 +209,55 @@ class LeftSideBarOptions extends React.Component {
     hanldeItemsActions = (isAdding: boolean, from: string, index: number) => {
         switch (from) {
             case 'Social Networks':
-                const updatedSocialItem = isAdding ? addItem(this.state.socialNetworksItems, 'index') : removeItem(this.state.socialNetworksItems, index)
+                const updatedSocialItem = isAdding ? addItem(this.state.socialNetworksItems, 'My Item') : removeItem(this.state.socialNetworksItems, index)
                 this.setState({
                     socialNetworksItems: updatedSocialItem
                 });
                 break;
             case 'Work Experiences':
-                const updatedWorkItem = isAdding ? addItem(this.state.workExperiencesItems, 'index') : removeItem(this.state.workExperiencesItems, index)
+                const updatedWorkItem = isAdding ? addItem(this.state.workExperiencesItems, 'My Item') : removeItem(this.state.workExperiencesItems, index)
                 this.setState({
                     workExperiencesItems: updatedWorkItem
                 });
                 break;
             case 'Educations':
-                const updatedEducationItem = isAdding ? addItem(this.state.educationsItems, 'index') : removeItem(this.state.educationsItems, index)
+                const updatedEducationItem = isAdding ? addItem(this.state.educationsItems, 'My Item') : removeItem(this.state.educationsItems, index)
                 this.setState({
                     educationsItems: updatedEducationItem
                 });
                 break;
             case 'Projects':
-                const updatedProjectItem = isAdding ? addItem(this.state.projectsItems, 'index') : removeItem(this.state.projectsItems, index)
+                const updatedProjectItem = isAdding ? addItem(this.state.projectsItems, 'My Item') : removeItem(this.state.projectsItems, index)
                 this.setState({
                     projectsItems: updatedProjectItem
                 });
                 break;
             case 'Awards':
-                const updatedAwardItem = isAdding ? addItem(this.state.awardsItems, 'index') : removeItem(this.state.awardsItems, index)
+                const updatedAwardItem = isAdding ? addItem(this.state.awardsItems, 'My Item') : removeItem(this.state.awardsItems, index)
                 this.setState({
                     awardsItems: updatedAwardItem
                 });
                 break;
             case 'Certifications':
-                const updatedCertsItem = isAdding ? addItem(this.state.certificationsItems, 'index') : removeItem(this.state.certificationsItems, index)
+                const updatedCertsItem = isAdding ? addItem(this.state.certificationsItems, 'My Item') : removeItem(this.state.certificationsItems, index)
                 this.setState({
                     certificationsItems: updatedCertsItem
                 });
                 break;
             case 'Skills':
-                const updatedSkillItem = isAdding ? addItem(this.state.skillsItems, 'index') : removeItem(this.state.skillsItems, index)
+                const updatedSkillItem = isAdding ? addItem(this.state.skillsItems, 'My Item') : removeItem(this.state.skillsItems, index)
                 this.setState({
                     skillsItems: updatedSkillItem
                 });
                 break;
             case 'Hobbies':
-                const updatedHobbiesItem = isAdding ? addItem(this.state.hobbiesItems, 'index') : removeItem(this.state.hobbiesItems, index)
+                const updatedHobbiesItem = isAdding ? addItem(this.state.hobbiesItems, 'My Item') : removeItem(this.state.hobbiesItems, index)
                 this.setState({
                     hobbiesItems: updatedHobbiesItem
                 });
                 break;
             case 'Languages':
-                const updatedLangItem = isAdding ? addItem(this.state.languagesItems, 'index') : removeItem(this.state.languagesItems, index)
+                const updatedLangItem = isAdding ? addItem(this.state.languagesItems, 'My Item') : removeItem(this.state.languagesItems, index)
                 this.setState({
                     languagesItems: updatedLangItem
                 });
@@ -274,9 +266,6 @@ class LeftSideBarOptions extends React.Component {
                 break;
         }
         if (isAdding) this.closeAddItemModal();
-    }
-
-    handleSetStates = (variable: string, value: any) => {
     }
     render() {
         const userProfile = {
@@ -303,7 +292,7 @@ class LeftSideBarOptions extends React.Component {
         }
         return (
             <>
-                <div className='d-flex flex-row'>
+                <div className='d-flex flex-row m-0'>
                     <SidePanelIcons />
                     <SidePanelFields handleFieldTypes={this.handleFieldTypes} handleAddItemModal={this.handleAddItemModal} headings={this.state.headings} itemsToAdd={itemsToAdd} hanldeItemsActions={this.hanldeItemsActions} />
                     <PreviewResume templateProperties={this.state.templateProperties} userProfile={userProfile} />
