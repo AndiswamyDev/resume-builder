@@ -23,7 +23,7 @@ class AddItemModal extends React.Component<AddItemModalInterfaces> {
                     escape key.
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary">Add</Button>
+                    <Button variant="primary" onClick={() => this.props.hanldeItemsActions(true, this.props.fromType, 0)}>Add</Button>
                 </Modal.Footer>
             </Modal>
 
