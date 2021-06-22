@@ -54,7 +54,7 @@ class LeftSideBarOptions extends React.Component {
         })
     }
     handleFieldTypes = (type: string, event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(event.target.name, event.target.value);
+        // console.log(event.target.name, event.target.value);
         switch (type) {
             case 'resumeTitle':
                 this.setState({
