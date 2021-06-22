@@ -42,5 +42,13 @@ export const CONSTANTS = {
     FIELD_LANGUAGES: 'Languages',
 
     //Resume preview
-    PREVIEW_WRAPPER: 'resume-preview-wrapper'
+    PREVIEW_WRAPPER: 'resume-preview-wrapper',
+
+    //Right side top panel tool icons
+    TOOLBAR_WRAPPER: 'toolbar-icons-wrapper',
+    TEMPLATES: 'rb-templates',
+    COLOURS: 'rb-color-palettes',
+    FONT_SIZE: 'rb-font-size',
+    FONT_FAMILY: 'rb-font-family',
+    DOWNLOAD: 'rb-download'
 }
