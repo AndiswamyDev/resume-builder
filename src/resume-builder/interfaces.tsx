@@ -7,6 +7,7 @@ export interface SideBarFieldsInterfaces {
 }
 
 export interface FieldToFillInterfaces {
+    fieldType: string;
     fromType: string;
     handleFieldTypes: (type: string, event: React.ChangeEvent<HTMLInputElement>) => void;
     handleAddItemModal: (from: string) => void;
@@ -43,6 +44,7 @@ export interface AddItemModalInterfaces {
 }
 
 export interface FormItemsListElementInterfaces {
+    fieldType: string;
     heading: string;
     itemsToAdd: any;
     hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;

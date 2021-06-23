@@ -1,0 +1,79 @@
+{
+    "templateName": "Andy's resume",
+    "profile": [{
+        "firstName": {
+            "id": "first-name",
+            "name": "First Name"
+        },
+        "lastName": {
+            "id": "last-name",
+            "name": "Last Name"
+        },
+        "address": {
+            "id": "address",
+            "name": "Address"
+        },
+        "city": {
+            "id": "city",
+            "name": "City"
+        },
+        "country": {
+            "id": "country",
+            "name": "Country"
+        },
+        "pinCode": {
+            "id": "pin-code",
+            "name": "Pin-Code"
+        },
+        "contactNo": {
+            "id": "contact-no",
+            "name": "Contact No"
+        },
+        "emailAddress": {
+            "id": "email-address",
+            "name": "Email Address"
+        }
+    }],
+    "addOnData": [{
+        "socialNetworks":{
+            "id": "socail-networks",
+            "name": "Social Networks"
+        },
+        "objective": {
+            "id": "objective",
+            "name": "Objective"
+        },
+        "workExperiences":{
+            "id": "work-experiences",
+            "name": "Work Experiences"
+        },
+        "educations": {
+            "id": "educations",
+            "name": "Educations"
+        },
+        "projects": {
+            "id": "projects",
+            "name": "Projects"
+        },
+        "awards": {
+            "id": "awards",
+            "name": "Awards"
+        },
+        "certifications": {
+            "id": "certifications",
+            "name": "Certifications"
+        },
+        "skills": {
+            "id": "skills",
+            "name": "Skills"
+        },
+        "hobbies": {
+            "id": "hobbies",
+            "name": "Hobbies"
+        },
+        "languages": {
+            "id": "languages",
+            "name": "Languages"
+        }
+    }]
+}

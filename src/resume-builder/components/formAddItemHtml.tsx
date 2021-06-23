@@ -7,30 +7,30 @@ class FormItemsListElement extends React.Component<FormItemsListElementInterface
         return (
             <>
                 {(() => {
-                    if (this.props.heading?.includes('Social')) {
+                    if (this.props.fieldType?.includes('Social')) {
                         return <CreateListHTML item={this.props.itemsToAdd.socialNetworks} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
-                    } else if (this.props.heading?.includes('Work')) {
+                    } else if (this.props.fieldType?.includes('Work')) {
                         return <CreateListHTML item={this.props.itemsToAdd.workExperiences} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Educations')) {
+                    else if (this.props.fieldType?.includes('Education')) {
                         return <CreateListHTML item={this.props.itemsToAdd.educations} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Projects')) {
+                    else if (this.props.fieldType?.includes('Project')) {
                         return <CreateListHTML item={this.props.itemsToAdd.projects} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Awards')) {
+                    else if (this.props.fieldType?.includes('Awards')) {
                         return <CreateListHTML item={this.props.itemsToAdd.awards} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Certifications')) {
+                    else if (this.props.fieldType?.includes('Certification')) {
                         return <CreateListHTML item={this.props.itemsToAdd.certifications} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Skills')) {
+                    else if (this.props.fieldType?.includes('Skills')) {
                         return <CreateListHTML item={this.props.itemsToAdd.skills} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Hobbies')) {
+                    else if (this.props.fieldType?.includes('Hobbies')) {
                         return <CreateListHTML item={this.props.itemsToAdd.hobbies} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
-                    else if (this.props.heading?.includes('Languages')) {
+                    else if (this.props.fieldType?.includes('Languages')) {
                         return <CreateListHTML item={this.props.itemsToAdd.languages} heading={this.props.heading} hanldeItemsActions={this.props.hanldeItemsActions} />
                     }
                 })()}

@@ -96,7 +96,7 @@ class LeftSideBarOptions extends React.Component {
                     emailAddress: event.target.value
                 });
                 break;
-            case 'Social Networks':
+            case this.state.headings.socialNetworks:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -105,7 +105,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Objective':
+            case this.state.headings.objective:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -119,7 +119,7 @@ class LeftSideBarOptions extends React.Component {
                     objectiveDesc: event.target.value
                 });
                 break;
-            case 'Work Experiences':
+            case this.state.headings.workExperiences:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -128,7 +128,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Educations':
+            case this.state.headings.educations:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -137,7 +137,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Projects':
+            case this.state.headings.projects:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -146,7 +146,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Awards':
+            case this.state.headings.awards:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -155,7 +155,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Certifications':
+            case this.state.headings.certifications:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -164,7 +164,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Skills':
+            case this.state.headings.skills:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -173,7 +173,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Hobbies':
+            case this.state.headings.hobbies:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -182,7 +182,7 @@ class LeftSideBarOptions extends React.Component {
                     ),
                 });
                 break;
-            case 'Languages':
+            case this.state.headings.languages:
                 this.setState({
                     headings: Object.assign(
                         {},
@@ -208,55 +208,55 @@ class LeftSideBarOptions extends React.Component {
     }
     hanldeItemsActions = (isAdding: boolean, from: string, index: number) => {
         switch (from) {
-            case 'Social Networks':
+            case this.state.headings.socialNetworks:
                 const updatedSocialItem = isAdding ? addItem(this.state.socialNetworksItems, 'My Item') : removeItem(this.state.socialNetworksItems, index)
                 this.setState({
                     socialNetworksItems: updatedSocialItem
                 });
                 break;
-            case 'Work Experiences':
+            case this.state.headings.workExperiences:
                 const updatedWorkItem = isAdding ? addItem(this.state.workExperiencesItems, 'My Item') : removeItem(this.state.workExperiencesItems, index)
                 this.setState({
                     workExperiencesItems: updatedWorkItem
                 });
                 break;
-            case 'Educations':
+            case this.state.headings.educations:
                 const updatedEducationItem = isAdding ? addItem(this.state.educationsItems, 'My Item') : removeItem(this.state.educationsItems, index)
                 this.setState({
                     educationsItems: updatedEducationItem
                 });
                 break;
-            case 'Projects':
+            case this.state.headings.projects:
                 const updatedProjectItem = isAdding ? addItem(this.state.projectsItems, 'My Item') : removeItem(this.state.projectsItems, index)
                 this.setState({
                     projectsItems: updatedProjectItem
                 });
                 break;
-            case 'Awards':
+            case this.state.headings.awards:
                 const updatedAwardItem = isAdding ? addItem(this.state.awardsItems, 'My Item') : removeItem(this.state.awardsItems, index)
                 this.setState({
                     awardsItems: updatedAwardItem
                 });
                 break;
-            case 'Certifications':
+            case this.state.headings.certifications:
                 const updatedCertsItem = isAdding ? addItem(this.state.certificationsItems, 'My Item') : removeItem(this.state.certificationsItems, index)
                 this.setState({
                     certificationsItems: updatedCertsItem
                 });
                 break;
-            case 'Skills':
+            case this.state.headings.skills:
                 const updatedSkillItem = isAdding ? addItem(this.state.skillsItems, 'My Item') : removeItem(this.state.skillsItems, index)
                 this.setState({
                     skillsItems: updatedSkillItem
                 });
                 break;
-            case 'Hobbies':
+            case this.state.headings.hobbies:
                 const updatedHobbiesItem = isAdding ? addItem(this.state.hobbiesItems, 'My Item') : removeItem(this.state.hobbiesItems, index)
                 this.setState({
                     hobbiesItems: updatedHobbiesItem
                 });
                 break;
-            case 'Languages':
+            case this.state.headings.languages:
                 const updatedLangItem = isAdding ? addItem(this.state.languagesItems, 'My Item') : removeItem(this.state.languagesItems, index)
                 this.setState({
                     languagesItems: updatedLangItem
