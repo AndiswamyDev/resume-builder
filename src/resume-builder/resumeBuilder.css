@@ -55,4 +55,9 @@ body {
 .color-palette-options {
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
+
+/* #toolbar-color-palette-option input {
+    max-width: 50%;
+} */

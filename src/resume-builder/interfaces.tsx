@@ -69,3 +69,16 @@ export interface BuilderNavBarInterfaces {
 export interface LeftSideBarOptionsInterfaces {
     toolBarOptionType: string
 }
+
+export interface ColorOptionsInterfaces {
+    selectHeadingColorPicker: (color: string) => void;
+    handleTextAndBgColor: (type: string, color: string) => void;
+    selectedProperties: any
+}
+
+export interface TextBgColorsInterfaces {
+    selectHeadingColorPicker: (color: string) => void;
+    handleTextAndBgColor: (type: string, color: string) => void;
+    selectedProperties: any
+    type: string
+}
