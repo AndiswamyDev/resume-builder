@@ -43,7 +43,7 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
             selectedBgColor: this.state.selectedBgColor
         }
         return (
-            <div className='d-flex flex-row border border-primary rounded p-2'>
+            <div className='d-flex flex-row border border-primary rounded p-2 m-2'>
                 {this.props.toolBarOptionType === 'templates' && <div id={CONSTANTS.TEMPLATES_OPTION}>
                     <div className='bg-primary rounded'>
                         <h6 className='p-2'>Templates</h6>
