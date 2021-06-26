@@ -1,3 +1,5 @@
+import LeftSideBarOptions from "./components/leftSideBarOptions";
+
 export interface SideBarFieldsInterfaces {
     handleFieldTypes: (type: string, event: React.ChangeEvent<HTMLInputElement>) => void;
     handleAddItemModal: (from: string) => void;
@@ -50,8 +52,20 @@ export interface FormItemsListElementInterfaces {
     hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
 }
 
-export interface CreateItemProps {
+export interface CreateItemInterfaces {
     item: any,
     heading: string;
     hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
+}
+
+export interface ToolBarOptionsInterface {
+    toolBarOptionType: string
+}
+
+export interface BuilderNavBarInterfaces {
+    handleToolbarOptions: (type: string) => void;
+}
+
+export interface LeftSideBarOptionsInterfaces {
+    toolBarOptionType: string
 }

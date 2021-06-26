@@ -1,6 +1,6 @@
 import React from 'react';
-import { InputGroup, FormControl, Form, Button } from 'react-bootstrap';
-import { FormItemsListElementInterfaces, CreateItemProps } from '../interfaces';
+import { Button } from 'react-bootstrap';
+import { FormItemsListElementInterfaces, CreateItemInterfaces } from '../interfaces';
 
 class FormItemsListElement extends React.Component<FormItemsListElementInterfaces>{
     render() {
@@ -39,7 +39,7 @@ class FormItemsListElement extends React.Component<FormItemsListElementInterface
     }
 }
 
-class CreateListHTML extends React.Component<CreateItemProps>{
+class CreateListHTML extends React.Component<CreateItemInterfaces>{
     render() {
         return (
             this.props.item?.length > 0 ? (

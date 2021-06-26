@@ -50,5 +50,11 @@ export const CONSTANTS = {
     COLOURS: 'rb-color-palettes',
     FONT_SIZE: 'rb-font-size',
     FONT_FAMILY: 'rb-font-family',
-    DOWNLOAD: 'rb-download'
+    DOWNLOAD: 'rb-download',
+
+    //Tool bar use items
+    TEMPLATES_OPTION: 'toolbar-templates',
+    COLOUR_PALETTE_OPTION: 'toolbar-color-palette-option',
+    FONT_SIZE_OPTION: 'toolbar-font-size-option',
+    FONT_FAMILY_OPTION: 'toolbar-family-option',
 }

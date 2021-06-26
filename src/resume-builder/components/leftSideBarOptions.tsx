@@ -3,9 +3,11 @@ import SidePanelIcons from '../views/SidePanelIcons';
 import SidePanelFields from './SidePanelFields';
 import PreviewResume from './previewResume';
 import AddItemModal from './addItemModal';
+import ToolBarOptions from '../views/toolbarOptions';
 import { addItem, removeItem } from '../utils/handleRemoveItem';
+import { LeftSideBarOptionsInterfaces } from '../interfaces';
 
-class LeftSideBarOptions extends React.Component {
+class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
     state = {
         fromType: 'Profile',
         headings: {
@@ -296,6 +298,7 @@ class LeftSideBarOptions extends React.Component {
                     <SidePanelIcons />
                     <SidePanelFields handleFieldTypes={this.handleFieldTypes} handleAddItemModal={this.handleAddItemModal} headings={this.state.headings} itemsToAdd={itemsToAdd} hanldeItemsActions={this.hanldeItemsActions} />
                     <PreviewResume templateProperties={this.state.templateProperties} userProfile={userProfile} />
+                    <ToolBarOptions toolBarOptionType={this.props.toolBarOptionType} />
                 </div>
                 <AddItemModal show={this.state.isModalOpen} onClose={this.closeAddItemModal} fromType={this.state.fromType} hanldeItemsActions={this.hanldeItemsActions} />
             </>

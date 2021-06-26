@@ -2,7 +2,6 @@ import React from 'react';
 import { InputGroup, FormControl, Form, Button } from 'react-bootstrap';
 import { FieldToFillInterfaces } from '../interfaces';
 import FormItemsListElement from './formAddItemHtml';
-import { CONSTANTS } from '../constants';
 class FieldToFill extends React.Component<FieldToFillInterfaces> {
     render() {
         return (
