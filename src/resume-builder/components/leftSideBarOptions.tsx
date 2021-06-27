@@ -3,7 +3,7 @@ import SidePanelIcons from '../views/SidePanelIcons';
 import SidePanelFields from './SidePanelFields';
 import PreviewResume from './previewResume';
 import AddItemModal from './addItemModal';
-import ToolBarOptions from '../views/toolbarOptions';
+import ToolBarOptions from '../views/toolbars/toolbarOptions';
 import { addItem, removeItem } from '../utils/handleRemoveItem';
 import { LeftSideBarOptionsInterfaces } from '../interfaces';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { CONSTANTS } from '../constants';
-import { ColorOptionsInterfaces } from '../interfaces';
-import TextBgColors from '../components/textBgColorOptions';
+import { CONSTANTS } from '../../constants';
+import { ColorOptionsInterfaces } from '../../interfaces';
+import TextBgColors from '../../components/textBgColorOptions';
 
 class ColorOptions extends React.Component<ColorOptionsInterfaces>{
     render() {
