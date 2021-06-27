@@ -82,3 +82,9 @@ export interface TextBgColorsInterfaces {
     selectedProperties: any
     type: string
 }
+
+export interface FontSizeFamilyInterfaces {
+    type: string
+    selectedFontProperties: any
+    handleFontSizeFamily: (type: string, value: string) => void;
+}

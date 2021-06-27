@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { FormControl, Row, Col } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
 import { TextBgColorsInterfaces } from '../interfaces';
 import { checkWhiteColors } from '../utils/checkValidations';
 

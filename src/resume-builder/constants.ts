@@ -48,6 +48,7 @@ export const CONSTANTS = {
     TOOLBAR_WRAPPER: 'toolbar-icons-wrapper',
     TEMPLATES: 'rb-templates',
     COLOURS: 'rb-color-palettes',
+    FONTS: 'rb-fonts',
     FONT_SIZE: 'rb-font-size',
     FONT_FAMILY: 'rb-font-family',
     DOWNLOAD: 'rb-download',
