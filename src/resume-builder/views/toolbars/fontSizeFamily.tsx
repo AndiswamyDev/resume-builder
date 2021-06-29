@@ -1,10 +1,9 @@
 import React from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FormControl } from 'react-bootstrap';
 import { CONSTANTS } from '../../constants';
 import { FontSizeFamilyInterfaces } from '../../interfaces';
-// import TextBgColors from '../../components/textBgColorOptions';
 
 class FontSizeFamily extends React.Component<FontSizeFamilyInterfaces> {
     render() {
@@ -23,25 +22,24 @@ class FontSizeFamily extends React.Component<FontSizeFamilyInterfaces> {
                             <h6 className='d-flex justify-content-center bg-primary rounded p-2'>{property}</h6>
                             <div className='d-flex flex-column d-flex justify-content-center'>
                                 {property === 'Font Family' && fontFamilyOptions.map((family: any) => {
-                                    return (<div className='d-flex flex-row'>
+                                    return (<div className='d-flex font-family-options'>
                                         {family.map((fontFamily: any) => {
                                             return (
-                                                <h6 className='m-2 p-2 rounded' style={{ fontFamily: family, color: 'black' }}
-                                                // onClick={() => this.props.selectHeadingColorPicker(item)}
-                                                >
-                                                    {Object.keys(fontFamily)}
-                                                </h6>
+                                                <div className='d-flex justify-content-center'>
+                                                    <span className='m-2 p-1 rounded bg-primary text-white' style={{ fontFamily: `${Object.values(fontFamily)}`, color: 'black' }}
+                                                        onClick={() => this.props.handleFontSizeFamily(property, `${Object.keys(fontFamily)}`)}
+                                                    >
+                                                        {Object.keys(fontFamily)}
+                                                        {this.props.selectedFontProperties.selectedFontFamily == Object.keys(fontFamily) ? <FontAwesomeIcon className='' icon={faCheckCircle}></FontAwesomeIcon> : ''}
+                                                    </span>
+                                                </div>
                                             )
                                         })
                                         }
                                     </div>
-
                                     )
                                 })}
                                 {property === 'Font Size' &&
-                                    // <div className=>
-
-                                    // </div>
                                     <FormControl
                                         size='sm'
                                         value={this.props.selectedFontProperties.selectedFontSize}
