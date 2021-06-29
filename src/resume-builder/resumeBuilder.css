@@ -9,8 +9,18 @@ body {
 }
 
 #side-panel-icons a:hover,
-#toolbar-icons-wrapper span:hover {
+#toolbar-icons-wrapper span:hover,
+.font-family-options span:hover {
     transform: scale(1.3);
+}
+
+.font-family-options span {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.font-family-options span:hover {
+    transform: scale(1.2);
 }
 
 .side-panel-fields {

@@ -14,7 +14,6 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
         selectedFontFamily: 'Lato'
     }
     selectHeadingColorPicker = (color: string) => {
-        console.log(color);
         this.setState({
             selectedHeadingColor: color
         });
@@ -36,8 +35,6 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
         }
     }
     handleFontSizeFamily = (type: string, value: string) => {
-        console.log(type, value);
-
         switch (type) {
             case 'Font Size':
                 this.setState({
@@ -54,7 +51,6 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
         }
     }
     render() {
-        console.log(this.state.selectedTextColor);
         const selectedColorProperties = {
             selectedHeadingColor: this.state.selectedHeadingColor,
             selectedTextColor: this.state.selectedTextColor,
@@ -64,10 +60,8 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
             selectedFontSize: this.state.selectedFontSize,
             selectedFontFamily: this.state.selectedFontFamily
         }
-        console.log('%%%%%%', this.props.toolBarOptionType)
         return (
             <div className='d-flex flex-row border border-primary rounded p-2 m-2'>
-
                 {this.props.toolBarOptionType === 'templates' && <div id={CONSTANTS.TEMPLATES_OPTION}>
                     <div className='bg-primary rounded'>
                         <h6 className='p-2'>Templates</h6>
@@ -76,9 +70,6 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
 
                 {/* colour tools */}
                 {this.props.toolBarOptionType === 'color' && <ColorOptions selectHeadingColorPicker={this.selectHeadingColorPicker} handleTextAndBgColor={this.handleTextAndBgColor} selectedProperties={selectedColorProperties} />}
-
-                {/* Font Size tools */}
-                {/* {this.props.toolBarOptionType === 'size' && <FontSizeFamily type='Size' selectedFontProperties={selectedFontProperties} handleFontSizeFamily={this.handleFontSizeFamily} />} */}
 
                 {/* Font famiily tools */}
                 {this.props.toolBarOptionType === 'fonts' && <FontSizeFamily type='fonts' selectedFontProperties={selectedFontProperties} handleFontSizeFamily={this.handleFontSizeFamily} />}
