@@ -25,9 +25,9 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
         templateProperties: {
             color: '#000',
             fontFamily: 'monospace',
-            themeColor: 'violet',
-            fontSize: '10px',
-            headingColor: 'red'
+            bgColor: '#fff',
+            fontSize: '10',
+            headingColor: '#2c785c'
         },
         resumeTitle: '',
         firstName: '',
@@ -269,6 +269,19 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
         }
         if (isAdding) this.closeAddItemModal();
     }
+    handleApplyToolBarProperties = (property: any) => {
+        // console.log(property);
+        this.setState({
+            templateProperties: {
+                color: property.selectedTextColor,
+                fontFamily: property.selectedFontFamily,
+                bgColor: property.selectedBgColor,
+                fontSize: property.selectedFontSize,
+                headingColor: property.selectedHeadingColor
+            }
+        })
+
+    }
     render() {
         const userProfile = {
             resumeTitle: this.state.resumeTitle,
@@ -294,11 +307,11 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
         }
         return (
             <>
-                <div className='d-flex flex-row m-0'>
+                <div className='d-flex flex-row justify-content-start m-0'>
                     <SidePanelIcons />
                     <SidePanelFields handleFieldTypes={this.handleFieldTypes} handleAddItemModal={this.handleAddItemModal} headings={this.state.headings} itemsToAdd={itemsToAdd} hanldeItemsActions={this.hanldeItemsActions} />
                     <PreviewResume templateProperties={this.state.templateProperties} userProfile={userProfile} />
-                    <ToolBarOptions toolBarOptionType={this.props.toolBarOptionType} />
+                    <ToolBarOptions toolBarOptionType={this.props.toolBarOptionType} handleApplyToolBarProperties={this.handleApplyToolBarProperties} />
                 </div>
                 <AddItemModal show={this.state.isModalOpen} onClose={this.closeAddItemModal} fromType={this.state.fromType} hanldeItemsActions={this.hanldeItemsActions} />
             </>

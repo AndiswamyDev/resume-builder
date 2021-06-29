@@ -8,7 +8,7 @@ import TextBgColors from '../../components/textBgColorOptions';
 class ColorOptions extends React.Component<ColorOptionsInterfaces>{
     render() {
         console.log(this.props.selectedProperties);
-        const colorOptions = [['black', '#2c785c', 'blue', 'aqua'], ['violet', 'pink', 'red', 'brown'], ['#a436a4', '#36a4a3', '#ea9f1a', 'purple'], ['#cb1e97', '#790a29c9', '#3cd796db', 'lavender']];
+        const colorOptions = [['#2c785c', 'black', 'blue', 'aqua'], ['violet', 'pink', 'red', 'brown'], ['#a436a4', '#36a4a3', '#ea9f1a', 'purple'], ['#cb1e97', '#790a29c9', '#3cd796db', 'lavender']];
         return (
             <div id={CONSTANTS.COLOUR_PALETTE_OPTION} className='d-flex flex-column'>
                 <h6 className='d-flex justify-content-center bg-primary rounded p-2'>Color palette</h6>

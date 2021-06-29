@@ -30,7 +30,7 @@ class FontSizeFamily extends React.Component<FontSizeFamilyInterfaces> {
                                                         onClick={() => this.props.handleFontSizeFamily(property, `${Object.keys(fontFamily)}`)}
                                                     >
                                                         {Object.keys(fontFamily)}
-                                                        {this.props.selectedFontProperties.selectedFontFamily == Object.keys(fontFamily) ? <FontAwesomeIcon className='' icon={faCheckCircle}></FontAwesomeIcon> : ''}
+                                                        {this.props.selectedFontProperties.selectedFontFamily == Object.keys(fontFamily) ? <FontAwesomeIcon icon={faCheckCircle}></FontAwesomeIcon> : ''}
                                                     </span>
                                                 </div>
                                             )
@@ -44,6 +44,7 @@ class FontSizeFamily extends React.Component<FontSizeFamilyInterfaces> {
                                         size='sm'
                                         value={this.props.selectedFontProperties.selectedFontSize}
                                         autoComplete='off'
+                                        maxLength={2}
                                         onChange={(event: any) => this.props.handleFontSizeFamily(property, event.target.value)}
                                     />
                                 }

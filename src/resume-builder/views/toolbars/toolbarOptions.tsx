@@ -7,12 +7,24 @@ import { CONSTANTS } from '../../constants';
 class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
 
     state = {
-        selectedHeadingColor: 'black',
+        selectedHeadingColor: '#2c785c',
         selectedTextColor: 'black',
         selectedBgColor: '#fff',
         selectedFontSize: '10',
         selectedFontFamily: 'Lato'
     }
+
+    updatePreviewPage = () => {
+        const property = {
+            selectedHeadingColor: this.state.selectedHeadingColor,
+            selectedTextColor: this.state.selectedTextColor,
+            selectedBgColor: this.state.selectedBgColor,
+            selectedFontSize: this.state.selectedFontSize,
+            selectedFontFamily: this.state.selectedFontFamily
+        }
+        this.props.handleApplyToolBarProperties(property)
+    }
+
     selectHeadingColorPicker = (color: string) => {
         this.setState({
             selectedHeadingColor: color
@@ -23,12 +35,12 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
             case 'text':
                 this.setState({
                     selectedTextColor: color
-                });
+                }, () => this.updatePreviewPage());
                 break;
             case 'background':
                 this.setState({
                     selectedBgColor: color
-                });
+                }, () => this.updatePreviewPage());
                 break;
             default:
                 break;
@@ -39,12 +51,12 @@ class ToolBarOptions extends React.Component<ToolBarOptionsInterface>{
             case 'Font Size':
                 this.setState({
                     selectedFontSize: value
-                });
+                }, () => this.updatePreviewPage());
                 break;
             case 'Font Family':
                 this.setState({
                     selectedFontFamily: value
-                });
+                }, () => this.updatePreviewPage());
                 break;
             default:
                 break;

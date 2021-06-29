@@ -59,7 +59,8 @@ export interface CreateItemInterfaces {
 }
 
 export interface ToolBarOptionsInterface {
-    toolBarOptionType: string
+    toolBarOptionType: string;
+    handleApplyToolBarProperties: (property: any) => void;
 }
 
 export interface BuilderNavBarInterfaces {
@@ -73,14 +74,14 @@ export interface LeftSideBarOptionsInterfaces {
 export interface ColorOptionsInterfaces {
     selectHeadingColorPicker: (color: string) => void;
     handleTextAndBgColor: (type: string, color: string) => void;
-    selectedProperties: any
+    selectedProperties: any;
 }
 
 export interface TextBgColorsInterfaces {
     selectHeadingColorPicker: (color: string) => void;
     handleTextAndBgColor: (type: string, color: string) => void;
     selectedProperties: any
-    type: string
+    type: string;
 }
 
 export interface FontSizeFamilyInterfaces {
