@@ -27,7 +27,7 @@ body {
     overflow-y: scroll;
     max-height: 86vh;
     border: 1px solid #eee;
-    width: 20%;
+    max-width: 20%;
     overflow-x: hidden;
 }
 
