@@ -34,6 +34,10 @@ class UserProfile extends React.Component<UserProfileInterfaces>{
                     </Col>
                 </Row>
                 <hr />
+                <small>Date of Birth</small>
+                <input type='date' onChange={(event: React.ChangeEvent<HTMLInputElement>) => this.props.handleFieldTypes('dob', event)}
+                    autoComplete='off' />
+                <hr />
                 <small>Address</small>
                 <InputGroup className="mb-3" size='sm'>
                     <FormControl onChange={(event: React.ChangeEvent<HTMLInputElement>) => this.props.handleFieldTypes('address', event)}

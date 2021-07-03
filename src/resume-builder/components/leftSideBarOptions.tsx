@@ -32,6 +32,7 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
         resumeTitle: '',
         firstName: '',
         lastName: '',
+        dob: '',
         address: '',
         city: '',
         country: '',
@@ -66,6 +67,11 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
             case 'lastName':
                 this.setState({
                     lastName: event.target.value
+                });
+                break;
+            case 'dob':
+                this.setState({
+                    dob: event.target.value
                 });
                 break;
             case 'address':

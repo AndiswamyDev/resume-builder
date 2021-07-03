@@ -22,11 +22,11 @@ class FontSizeFamily extends React.Component<FontSizeFamilyInterfaces> {
                             <h6 className='d-flex justify-content-center bg-primary rounded p-2'>{property}</h6>
                             <div className='d-flex flex-column d-flex justify-content-center'>
                                 {property === 'Font Family' && fontFamilyOptions.map((family: any) => {
-                                    return (<div className='d-flex font-family-options'>
+                                    return (<div className='d-flex font-family-options flex-column'>
                                         {family.map((fontFamily: any) => {
                                             return (
                                                 <div className='d-flex justify-content-center'>
-                                                    <span className='m-2 p-1 rounded bg-primary text-white' style={{ fontFamily: `${Object.values(fontFamily)}`, color: 'black' }}
+                                                    <span className='m-2 p-1 rounded textt-primary' style={{ fontFamily: `${Object.values(fontFamily)}`, color: 'black' }}
                                                         onClick={() => this.props.handleFontSizeFamily(property, `${Object.keys(fontFamily)}`)}
                                                     >
                                                         {Object.keys(fontFamily)}
