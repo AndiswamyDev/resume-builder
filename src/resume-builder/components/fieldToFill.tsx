@@ -27,7 +27,7 @@ class FieldToFill extends React.Component<FieldToFillInterfaces> {
                         <div className='d-flex flex-column'>
                             <FormItemsListElement fieldType={this.props.fieldType} heading={this.props.headings} itemsToAdd={this.props.itemsToAdd} hanldeItemsActions={this.props.hanldeItemsActions} />
                         </div>
-                        <Button className='flex-row btn-secondary justify-content-end' size='sm' onClick={() => this.props.handleAddItemModal(this.props.fromType)} > Add</Button>
+                        <Button className='flex-row btn-secondary justify-content-end' size='sm' onClick={(event) => this.props.handleAddItemModal(this.props.fromType, event)} > Add</Button>
                     </>
                 }
             </div>

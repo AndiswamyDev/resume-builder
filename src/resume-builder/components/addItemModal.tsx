@@ -4,6 +4,7 @@ import { AddItemModalInterfaces } from '../interfaces';
 
 class AddItemModal extends React.Component<AddItemModalInterfaces> {
     render() {
+        console.log(this.props.fromType);
         return (
             <Modal
                 show={this.props.show}

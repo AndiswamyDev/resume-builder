@@ -51,6 +51,7 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
         hobbiesItems: [],
         languagesItems: [],
         isModalOpen: false,
+        selectedModalItem: ''
     }
     handleFieldTypes = (type: string, event: React.ChangeEvent<HTMLInputElement>) => {
         switch (type) {
@@ -203,10 +204,13 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
                 break;
         }
     }
-    handleAddItemModal = (from: string) => {
+    handleAddItemModal = (from: string, event: any) => {
+        console.log('eventeventevent', event.target.parentElement.id);
+
         this.setState({
             isModalOpen: true,
-            fromType: from
+            fromType: from,
+            selectedModalItem: event.target.parentElement.id
         });
     }
     closeAddItemModal = () => {
@@ -215,6 +219,7 @@ class LeftSideBarOptions extends React.Component<LeftSideBarOptionsInterfaces>{
         });
     }
     hanldeItemsActions = (isAdding: boolean, from: string, index: number) => {
+        console.log('from', from);
         switch (from) {
             case this.state.headings.socialNetworks:
                 const updatedSocialItem = isAdding ? addItem(this.state.socialNetworksItems, 'My Item') : removeItem(this.state.socialNetworksItems, index)

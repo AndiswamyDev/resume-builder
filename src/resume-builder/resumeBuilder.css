@@ -59,7 +59,7 @@ body {
 } */
 
 .resume-preview {
-    max-width: 60%;
+    min-width: 60%;
 }
 
 .color-palette-options {

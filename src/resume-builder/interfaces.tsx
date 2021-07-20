@@ -2,7 +2,7 @@ import LeftSideBarOptions from "./components/leftSideBarOptions";
 
 export interface SideBarFieldsInterfaces {
     handleFieldTypes: (type: string, event: React.ChangeEvent<HTMLInputElement>) => void;
-    handleAddItemModal: (from: string) => void;
+    handleAddItemModal: (from: string, event: any) => void;
     headings: any;
     itemsToAdd: any;
     hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
@@ -12,7 +12,7 @@ export interface FieldToFillInterfaces {
     fieldType: string;
     fromType: string;
     handleFieldTypes: (type: string, event: React.ChangeEvent<HTMLInputElement>) => void;
-    handleAddItemModal: (from: string) => void;
+    handleAddItemModal: (from: string, event: any) => void;
     headings: any;
     itemsToAdd: any;
     hanldeItemsActions: (isAdding: boolean, from: string, index: number) => void;
